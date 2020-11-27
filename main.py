@@ -4,7 +4,7 @@ pygame.init()
 
 white = (255, 255, 255)
 black = (0, 0, 0)
-red = (255,0,0)
+red = (255, 0, 0)
 
 dis = pygame.display.set_mode((800, 600))
 pygame.display.set_caption("Snakeyy")
@@ -31,16 +31,16 @@ while not game_over:
                 x1_change = 10
                 y1_change = 0
             elif event.key == pygame.K_UP:
-                x1_change = -10
-                y1_change = 0
+                y1_change = -10
+                x1_change = 0
             elif event.key == pygame.K_DOWN:
-                x1_change = 10
-                y1_change = 0
+                y1_change = 10
+                x1_change = 0
 
     x1 += x1_change
     y1 += y1_change
-    dis.fill(black)
-    pygame.draw.rect(dis, white, [x1, y1, 10, 10])
+    dis.fill(white)
+    pygame.draw.rect(dis, black, [x1, y1, 10, 10])
 
     pygame.display.update()
 
